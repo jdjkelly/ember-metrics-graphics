@@ -1,6 +1,14 @@
 # Ember-metrics-graphics
 
-This README outlines the details of collaborating on this Ember addon.
+This project is an ember-cli-addon wrapper for Mozilla's metrics-graphics.js lib. It aims to:
+
+1) Manage the inclusion of metrics-graphics.js dependencies in your Ember project
+2) Provide drop in components that match the metrics-graphics API
+3) Provide intelligent rerendering on data change (metrics-graphics is itself stateless)
+
+## Usage
+* `npm install ember-metrics-graphics --save-dev` in your ember-cli project
+* Include graphics via `{{data-graphics}}` component
 
 ## Installation
 
