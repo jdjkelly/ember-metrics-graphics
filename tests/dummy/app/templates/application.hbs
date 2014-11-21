@@ -1,3 +1,14 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<h2 id='title'>ember-metrics-graphics</h2>
+
+{{data-graphic
+  description="Yearly UFO sightings from 1945 to 2010."
+  data=data
+  markers=markers
+  width=400
+  height=250
+  x_accessor="year"
+  y_accessor="sightings"
+  interpolate="monotone"
+}}
 
 {{outlet}}
