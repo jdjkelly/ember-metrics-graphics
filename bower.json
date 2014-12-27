@@ -15,6 +15,6 @@
     "qunit": "~1.15.0"
   },
   "devDependencies": {
-    "metrics-graphics": "*"
+    "metrics-graphics": "2.0.0"
   }
 }

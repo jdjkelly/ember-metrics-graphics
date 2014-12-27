@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   didInsertElement: function() {
     this._super.apply(this, arguments);
 
-    data_graphic({
+    MG.data_graphic({
       inflator:                 this.get('inflator'),
       max_x:                    this.get('max_x'),
       max_y:                    this.get('max_y'),
