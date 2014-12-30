@@ -4,8 +4,6 @@ export default Ember.Component.extend({
   tagName: 'data-graphic',
 
   renderDataGraphic: function() {
-    this._super.apply(this, arguments);
-
     MG.data_graphic({
       inflator:                 this.get('inflator'),
       max_x:                    this.get('max_x'),
@@ -39,7 +37,7 @@ export default Ember.Component.extend({
       markers:                  this.get('markers'),
       max_data_size:            this.get('max_data_size'),
       point_size:               this.get('point_size'),
-      rollover_callback:        this.get('rollover_callback'),
+      mouseover:                this.get('mouseover'),
       show_confidence_band:     this.get('show_confidence_band'),
       show_rollover_text:       this.get('show_rollover_text'),
       target:                   "#" + this.get('elementId'),
@@ -73,6 +71,15 @@ export default Ember.Component.extend({
       binned:                   this.get('binned'),
       bins:                     this.get('bins')
     });
-  }.on('didInsertElement')
+    Ember.addObserver(this, 'data', this.dataPropertyDidChange);
+  }.on('didInsertElement'),
+
+  willDestroyElement: function() {
+    Ember.removeObserver(this, 'data', this.dataPropertyDidChange);
+  },
+
+  dataPropertyDidChange: function() {
+    this.renderDataGraphic();
+  }
 
 });
