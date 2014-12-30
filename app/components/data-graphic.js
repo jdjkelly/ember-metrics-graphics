@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'data-graphic',
 
-  didInsertElement: function() {
+  renderDataGraphic: function() {
     this._super.apply(this, arguments);
 
     MG.data_graphic({
@@ -73,6 +73,6 @@ export default Ember.Component.extend({
       binned:                   this.get('binned'),
       bins:                     this.get('bins')
     });
-  }
+  }.on('didInsertElement')
 
 });
