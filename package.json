@@ -10,7 +10,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/jdjkelly/ember-metrics-graphics",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -30,7 +30,7 @@
     "express": "^4.8.5",
     "glob": "^4.0.5"
   },
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "TAn ember-cli wrapper around Mozilla's metricsgraphics.js lib.",
   "keywords": [
     "ember-addon"
   ],
